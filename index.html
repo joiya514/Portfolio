@@ -22,9 +22,6 @@
             background-color: #343a40; /* Darker background color */
             position: relative; /* Added to position the download button */
         }
-        html {
-            scroll-behavior: smooth;
-            }
 
         .nav-links a {
             text-decoration: none;
@@ -365,7 +362,7 @@
             <a href="./Projects/index.html">Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <li><a href="#" id="contactLink">Contact</a></li>
           </li>
           <li>
             <a class="download-cv" href="Resume.pdf" target="_blank">Download CV</a>
@@ -477,5 +474,15 @@
     </div>
    </section>
   </main>
+  <script>
+    // Scroll to #contact section without changing URL on page load
+    document.getElementById("contactLink").addEventListener("click", function(event) {
+        event.preventDefault();  // Prevent default anchor action
+        const contactSection = document.querySelector("#contact");
+
+        // Use smooth scrolling via JavaScript
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+</script>
  </body>
 </html>
