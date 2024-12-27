@@ -22,7 +22,10 @@
             background-color: #343a40; /* Darker background color */
             position: relative; /* Added to position the download button */
         }
-        
+        html {
+            scroll-behavior: smooth;
+            }
+            
         .nav-links a {
             text-decoration: none;
             color: #fff; /* Change text color to white for better contrast */
@@ -356,13 +359,13 @@
             <a class="active" href="index.html">Home</a>
           </li>
           <li>
-            <a href="about.html">About Me</a>
+            <a href="./about_me.html">About Me</a>
           </li>
           <li>
-            <a href="./projects/index.html">Projects</a>
+            <a href="./Projects/index.html">Projects</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li>
             <a class="download-cv" href="Resume.pdf" target="_blank">Download CV</a>
@@ -445,7 +448,7 @@
      </a>
     </div>
    </section>
-   <section class="contact">
+   <section class="contact" id="contact">
     <h2>
      Contact Me
     </h2>
