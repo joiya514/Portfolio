@@ -1,0 +1,219 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Project Details
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: #343a40;
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #576370;
+            color: #fff;
+        }
+        .nav-links .active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .shared-background {
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        }
+        .shared-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+        .shared-background h2, .shared-background .project-cards, .shared-background .view-all-projects-btn, .shared-background p, .shared-background .btn {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        .project-details {
+            padding: 2rem 2rem 4rem 2rem;
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .project-details h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .project-details p {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .project-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .project-details .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            width: fit-content;
+            margin: 2rem auto 0 auto;
+        }
+        .project-details .btn:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .project-details .section-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #0099ff;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <nav>
+    <ul class="nav-links">
+     <li>
+      <a href="../../index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="about.html">
+       About Me
+      </a>
+     </li>
+     <li>
+      <a href="projects.html">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="contact.html">
+       Contact
+      </a>
+    </li>
+    </ul>
+   </nav>
+  </header>
+  <main>
+   <section class="shared-background">
+    <div class="project-details">
+     <h2>
+      Project 1: AI-Powered Web Application
+     </h2>
+     <img alt="Image of Project" src="Images/Your Products.png"/>
+     <p>
+      This project is an AI-powered web application designed to provide real-time analytics and insights. It leverages machine learning algorithms to analyze data and present it in an intuitive dashboard format.
+     </p>
+     <h3 class="section-title">
+      Project Overview
+     </h3>
+     <p>
+      The AI-Powered Web Application was developed to help businesses make data-driven decisions. It integrates with various data sources, processes the data using advanced machine learning models, and displays the results in a user-friendly interface.
+     </p>
+     <img alt="Detailed view of the AI model architecture used in the project" src="https://storage.googleapis.com/a1aa/image/eoPg9zjHqxW1NiaZkg5OiyudwGIcmXSAJ0eKQVG52IltbKfnA.jpg"/>
+     <p>
+      The application features a robust backend built with Python and Flask, while the frontend is developed using React.js. The machine learning models are trained using TensorFlow and scikit-learn, ensuring high accuracy and performance.
+     </p>
+     <h3 class="section-title">
+      Key Features
+     </h3>
+     <ul>
+      <li>
+       Real-time data processing and analytics
+      </li>
+      <li>
+       Customizable dashboards and reports
+      </li>
+      <li>
+       Integration with multiple data sources
+      </li>
+      <li>
+       Advanced machine learning models for predictive analytics
+      </li>
+      <li>
+       User-friendly interface with interactive charts and graphs
+      </li>
+     </ul>
+     <img alt="Screenshot showing the customizable dashboard feature of the application" src="https://storage.googleapis.com/a1aa/image/BeBqZ0ay2BW9eESF8VjOmY6eG8EaGQXMcy9ydbj9IT9fup8PB.jpg"/>
+     <h3 class="section-title">
+      Technologies Used
+     </h3>
+     <p>
+      The project utilizes a variety of technologies to achieve its goals:
+     </p>
+     <ul>
+      <li>
+       Backend: Python, Flask
+      </li>
+      <li>
+       Frontend: React.js, HTML, CSS
+      </li>
+      <li>
+       Machine Learning: TensorFlow, scikit-learn
+      </li>
+      <li>
+       Database: PostgreSQL
+      </li>
+      <li>
+       Deployment: Docker, Kubernetes
+      </li>
+     </ul>
+     <img alt="Diagram showing the deployment architecture of the application" src="https://storage.googleapis.com/a1aa/image/c683HMKRfoyJIqaVLgMS9xhOuRkbqhLhVBpF648Qflz2bKfnA.jpg"/>
+     <h3 class="section-title">
+      Challenges and Solutions
+     </h3>
+     <p>
+      One of the main challenges faced during the development of this project was ensuring the scalability of the application. To address this, we implemented a microservices architecture and used Kubernetes for container orchestration, allowing the application to handle increased load efficiently.
+     </p>
+     <img alt="Graph showing the performance improvements after implementing microservices architecture" src="https://storage.googleapis.com/a1aa/image/p1KM82Dkk7rDCZOGq8Sy2GvqRfu2ZhaJod8jlKeOclpzbKfnA.jpg"/>
+     <h3 class="section-title">
+      Future Enhancements
+     </h3>
+     <p>
+      In the future, we plan to add more advanced analytics features, such as anomaly detection and automated report generation. Additionally, we aim to improve the user interface to provide an even more seamless experience for our users.
+     </p>
+     <img alt="Mockup of the planned future enhancements for the application" src="https://storage.googleapis.com/a1aa/image/wiNjYj0lZeTpbqqIRZ5JhexipkuhgIUjIWTlBPf9hG4r3UePB.jpg"/>
+     <a class="btn" href="projects.html">
+      Back to Projects
+     </a>
+    </div>
+   </section>
+  </main>
+ </body>
+</html>
