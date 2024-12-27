@@ -1,0 +1,381 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   All Projects
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: #343a40;
+            position: relative;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #576370;
+            color: #fff;
+        }
+        .nav-links .active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .download-cv {
+            background-color: #c02d2d;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .download-cv:hover {
+            background-color: #ff0c0c !important;
+            color: #fff !important;
+        }
+        .shared-background {
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        }
+        .shared-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+        .shared-background h2, .shared-background .project-cards, .shared-background .view-all-projects-btn, .shared-background p, .shared-background .btn {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        .projects {
+            padding: 2rem;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        .projects h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+        }
+        .project-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .card:hover h3 {
+            color: #007bff;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #666 !important;
+            margin-bottom: 1rem;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+        }
+        .card:hover::before {
+            animation: borderColorCycleHover 4s linear infinite;
+        }
+        @keyframes borderColorCycleHover {
+            0% {
+                border-top-color: #ff0000;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            8.33% {
+                border-top-color: transparent;
+                border-right-color: #ff0000;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            16.66% {
+                border-top-color: transparent;
+                border-right-color: #00ff00;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            25% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: #00ff00;
+                border-left-color: transparent;
+            }
+            33.33% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: #0000ff;
+                border-left-color: transparent;
+            }
+            41.66% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: #0000ff;
+            }
+            50% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: #ff00ff;
+            }
+            58.33% {
+                border-top-color: #ff00ff;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            66.66% {
+                border-top-color: #ff0000;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            75% {
+                border-top-color: transparent;
+                border-right-color: #ff0000;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            83.33% {
+                border-top-color: transparent;
+                border-right-color: #00ff00;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+            91.66% {
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: #00ff00;
+                border-left-color: transparent;
+            }
+            100% {
+                border-top-color: #ff0000;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+            }
+        }
+        .category-heading {
+            font-size: 1.75rem;
+            font-weight: bold;
+            text-align: left;
+            padding-left: 10rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: #0099ff !important;
+            position: relative;
+            z-index: 1;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <nav>
+    <ul class="nav-links">
+     <li>
+      <a href="../index.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="about.html">
+       About Me
+      </a>
+     </li>
+     <li>
+      <a class="active" href="projects.html">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="contact.html">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a class="download-cv" href="../Resume.pdf" target="_blank">
+       Download CV
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main>
+   <section class="shared-background">
+    <div class="projects">
+     <h2>
+      My All Projects
+     </h2>
+     <h3 class="category-heading">Artificial Intelligence</h3>
+     <div class="project-cards">
+      <a class="card" href="project1.html">
+       <img alt="Screenshot of Project 1" height="200" src="https://storage.googleapis.com/a1aa/image/j0jq5Cufn616XinwFCibshN5CUCSpjzok4INYuVGTlALBz6JA.jpg" width="300"/>
+       <h3>
+        Project 1
+       </h3>
+       <p>
+        A brief description of Project 1. This project showcases my skills in web development and design.
+       </p>
+      </a>
+      <a class="card" href="project2.html">
+       <img alt="Screenshot of Project 2" height="200" src="https://storage.googleapis.com/a1aa/image/lVcNjR4MjTY3MVYyjcEwMY6xUdpHK26legopC3ZZr8EJBz6JA.jpg" width="300"/>
+       <h3>
+        Project 2
+       </h3>
+       <p>
+        A brief description of Project 2. This project demonstrates my expertise in Python and data analysis.
+       </p>
+      </a>
+      <a class="card" href="project3.html">
+       <img alt="Screenshot of Project 3" height="200" src="https://storage.googleapis.com/a1aa/image/6NZbebRenjkJ8k5ebVk73u3dV8s7NfLhAFHurTRa1cRTJYWPB.jpg" width="300"/>
+       <h3>
+        Project 3
+       </h3>
+       <p>
+        A brief description of Project 3. This project highlights my skills in machine learning and AI.
+       </p>
+      </a>
+     </div>
+     <h3 class="category-heading">Web Development</h3>
+     <div class="project-cards">
+      <a class="card" href="project4.html">
+       <img alt="Screenshot of Project 4" height="200" src="https://storage.googleapis.com/a1aa/image/rCfEHnRZdegzVUAiJMYM9KAvekpmwr31aPvOxzbb1P3LqGePB.jpg" width="300"/>
+       <h3>
+        Project 4
+       </h3>
+       <p>
+        A brief description of Project 4. This project showcases my skills in web development and design.
+       </p>
+      </a>
+      <a class="card" href="project5.html">
+       <img alt="Screenshot of Project 5" height="200" src="https://storage.googleapis.com/a1aa/image/VrLULyyrmJ64MFHSupFz4Rh38nOkKEAzWfNw4MRZcIZfUDfnA.jpg" width="300"/>
+       <h3>
+        Project 5
+       </h3>
+       <p>
+        A brief description of Project 5. This project demonstrates my expertise in Python and data analysis.
+       </p>
+      </a>
+      <a class="card" href="project6.html">
+       <img alt="Screenshot of Project 6" height="200" src="https://storage.googleapis.com/a1aa/image/ev5xYxDOtLXkCaDtRlXh1UQNM4je4DMftwfyhtiPdgPyTN8PB.jpg" width="300"/>
+       <h3>
+        Project 6
+       </h3>
+       <p>
+        A brief description of Project 6. This project highlights my skills in machine learning and AI.
+       </p>
+      </a>
+     </div>
+     <h3 class="category-heading">Data Analysis</h3>
+     <div class="project-cards">
+      <a class="card" href="project7.html">
+       <img alt="Screenshot of Project 7" height="200" src="https://storage.googleapis.com/a1aa/image/DQkIskV3m1IDAF91tTKHVzXXgtfoCxsUQKBG3g2FwokmqhfTA.jpg" width="300"/>
+       <h3>
+        Project 7
+       </h3>
+       <p>
+        A brief description of Project 7. This project showcases my skills in web development and design.
+       </p>
+      </a>
+      <a class="card" href="project8.html">
+       <img alt="Screenshot of Project 8" height="200" src="https://storage.googleapis.com/a1aa/image/5TUwW7Fmz2KMElbftDHKMYXUNschgnJesUatosApV2BDVDfnA.jpg" width="300"/>
+       <h3>
+        Project 8
+       </h3>
+       <p>
+        A brief description of Project 8. This project demonstrates my expertise in Python and data analysis.
+       </p>
+      </a>
+      <a class="card" href="project9.html">
+       <img alt="Screenshot of Project 9" height="200" src="https://storage.googleapis.com/a1aa/image/69QeEqaZUgUhcaMluycTIHYxVY847Ta3EtQK30t9VmlkqhfTA.jpg" width="300"/>
+       <h3>
+        Project 9
+       </h3>
+       <p>
+        A brief description of Project 9. This project highlights my skills in machine learning and AI.
+       </p>
+      </a>
+     </div>
+     <h3 class="category-heading">Miscellaneous</h3>
+     <div class="project-cards">
+      <a class="card" href="project10.html">
+       <img alt="Screenshot of Project 10" height="200" src="https://storage.googleapis.com/a1aa/image/LabIVyQaHdL6LZ7RWWItHGQRgdEX8S3MeYdK1r4QB6SdqhfTA.jpg" width="300"/>
+       <h3>
+        Project 10
+       </h3>
+       <p>
+        A brief description of Project 10. This project showcases my skills in web development and design.
+       </p>
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+ </body>
+</html>
